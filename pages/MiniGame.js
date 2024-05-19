@@ -1,9 +1,11 @@
+import dynamic from 'next/dynamic';
 import React, { useState, useEffect } from 'react';
 import DraggableItem from '../components/DraggableItem';
-import Bin from '../components/GameBins';
 import styles from "@/styles/MiniGame.module.css";
 import HamburgerMenu from "@/components/HamburgerMenu";
 import { NavigationBar } from "@/components/Navigation";
+
+const Bin = dynamic(() => import('../components/GameBins'), { ssr: false });
 
 const ResultsPage = ({ score, onRestart }) => {
     const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);

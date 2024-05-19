@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from './GameBins.module.css';
 
 const Bin = ({ id, onDrop, onDragOver, imageSrc, setScore }) => {
@@ -8,12 +8,13 @@ const Bin = ({ id, onDrop, onDragOver, imageSrc, setScore }) => {
     const wrongAudio = useRef(null);
 
     useEffect(() => {
-        // This will run only on the client-side
-        correctAudio.current = new Audio('/audio/correct-answer.mp3');
-        wrongAudio.current = new Audio('/audio/wrong-answer.mp3');
-
-        correctAudio.current.volume = 0.2;
-        wrongAudio.current.volume = 0.2;
+        if (typeof window !== 'undefined') {
+            correctAudio.current = new Audio('/audio/correct-answer.mp3');
+            wrongAudio.current = new Audio('/audio/wrong-answer.mp3');
+            
+            correctAudio.current.volume = 0.2;
+            wrongAudio.current.volume = 0.2;
+        }
     }, []);
 
     const handleDrop = (e) => {
