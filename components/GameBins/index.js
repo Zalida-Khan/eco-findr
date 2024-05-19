@@ -1,15 +1,20 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import styles from './GameBins.module.css';
 
 const Bin = ({ id, onDrop, onDragOver, imageSrc, setScore }) => {
     const [isIncorrect, setIsIncorrect] = useState(false);
     const [isCorrect, setIsCorrect] = useState(false);
+    const correctAudio = useRef(null);
+    const wrongAudio = useRef(null);
 
-    const correctAudio = useRef(new Audio('/audio/correct-answer.mp3'));
-    const wrongAudio = useRef(new Audio('/audio/wrong-answer.mp3'));
+    useEffect(() => {
+        // This will run only on the client-side
+        correctAudio.current = new Audio('/audio/correct-answer.mp3');
+        wrongAudio.current = new Audio('/audio/wrong-answer.mp3');
 
-    correctAudio.current.volume = 0.2;
-    wrongAudio.current.volume = 0.2;
+        correctAudio.current.volume = 0.2;
+        wrongAudio.current.volume = 0.2;
+    }, []);
 
     const handleDrop = (e) => {
         e.preventDefault();
@@ -17,18 +22,22 @@ const Bin = ({ id, onDrop, onDragOver, imageSrc, setScore }) => {
         if (droppedItem !== id) {
             setIsIncorrect(true);
             setScore(score => score - 1);
-            wrongAudio.current.play();
+            if (wrongAudio.current) {
+                wrongAudio.current.play();
+            }
             setTimeout(() => {
                 setIsIncorrect(false);
             }, 1000);
         } else {
             setIsCorrect(true);
-            setScore(score => score + 1); 
-            correctAudio.current.play();
+            setScore(score => score + 1);
+            if (correctAudio.current) {
+                correctAudio.current.play();
+            }
             setTimeout(() => {
                 setIsCorrect(false);
             }, 1000);
-            onDrop(e, id); 
+            onDrop(e, id);
         }
     };
 
