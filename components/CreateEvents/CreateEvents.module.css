@@ -1,0 +1,411 @@
+.box {
+    display: flex;
+    flex-direction: column;
+    width: 341px;
+    min-width: inherit;
+    height: 292px;
+    border-radius: 23px;
+    background-color: var(--paleGreen);
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  
+  .event {
+    display: flex;
+    width: 324px;
+    height: 82px;
+    border-radius: 15px;
+    background-color: var(--midGreen);
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .info {
+    font: "Figtree";
+    font-weight: 400;
+    size: 16px;
+    line-height: 25px;
+    color: var(--white);
+    flex-grow: 1;
+  }
+  
+  .date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .eventHandling {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-left: 10px;
+  }
+  
+
+  
+  .createButton {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--darkGreen);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 20px;
+
+  }
+  
+  .createButton:hover {
+    background-color: var(--lightGreen);
+  }
+  
+  .pen {
+    color: var(--white);
+    width: 32px;
+    height: 32px;
+  }
+  
+  .overlaySidebar {
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
+  
+  .overlaySidebar.open {
+    height: 100vh;
+  }
+  
+  .overlaySidebarContent {
+    width: 377px;
+    height: 640px;
+    border-radius: 15px;
+    background-color: var(--midGreen);
+    /* padding: 20px; */
+    margin-left: 20px;
+  }
+  
+  .closeEvent {
+    width: 72px;
+    height: 10px;
+    background-color: var(--white);
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  
+  .eventForm {
+    height: 640px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    align-items: center;
+  }
+  
+  .eventInfo {
+    width: 312px;
+    height: 76px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--paleGreen);
+  }
+  
+  .eventInput {
+    background: none;
+    border: none;
+    outline: none;
+    width: 300px;
+    height: 20px;
+  }
+  
+  .divider {
+    width: 270px;
+    color: var(--midGreen);
+  }
+  
+  .eventDescription {
+    width: 312px;
+    height: 38px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--paleGreen);
+    margin-top: 60px;
+  }
+  
+  .eventDateInfo {
+    width: 312px;
+    height: 142px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 60px;
+    background-color: var(--paleGreen);
+  }
+  
+  .eventLabelInput {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .eventLabelInput>label {
+    font-size: 14px;
+  }
+  
+  .eventTime {
+    width: 60px;
+    height: 28px;
+    background-color: blueviolet;
+    color: aquamarine;
+  }
+  
+  .head {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 35px;
+  }
+  
+  .newEventHeader {
+    color: var(--white);
+  }
+  
+  .createActive {
+    color: var(--white);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .createActive:hover {
+    color: var(--darkGreen);
+    text-decoration: none;
+  }
+  
+  .createInactive {
+    color: var(--lightGreen);
+  }
+
+  /* Media query for smaller screens */
+@media only screen and (min-device-width: 428px) and (max-device-width: 926px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
+    .createButton {
+        display: flex;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: var(--darkGreen);
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: fixed;
+        left: 350px;
+        margin-bottom: -15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+      }
+    
+      .createButton:hover {
+        background-color: var(--lightGreen);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+      }
+
+}
+
+/* Media query for larger screens */
+@media only screen and (min-width: 1024px) {
+.date {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+      }
+      
+      .eventHandling {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-left: 10px;
+      }
+      
+      .box {
+        display: flex;
+        flex-direction: column;
+        width: 341px;
+        min-width: inherit;
+        height: 250px;
+        border-radius: 23px;
+        background-color: var(--paleGreen);
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 5px;
+        margin-left: 5px;
+      }
+      
+      .event {
+        display: flex;
+        width: 324px;
+        height: 82px;
+        border-radius: 15px;
+        background-color: var(--midGreen);
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 15px;
+      }
+      
+      .date {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+      }
+      
+      .createButton {
+        display: flex;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: var(--darkGreen);
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: fixed;
+        right: 359px;
+        margin-bottom: 70px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+      }
+    
+      .createButton:hover {
+        background-color: var(--lightGreen);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+      }
+      
+      .pen {
+        color: var(--white);
+        width: 32px;
+        height: 32px;
+      }
+      
+      .overlaySidebar {
+        position: fixed;
+        bottom: 0;
+        overflow: hidden;
+        transition: height 0.3s ease;
+      }
+      
+      .overlaySidebar.open {
+        height: 100vh;
+      }
+      
+      .overlaySidebarContent {
+        width: 377px;
+        height: 640px;
+        border-radius: 15px;
+        background-color: var(--midGreen);
+        /* padding: 20px; */
+        margin-left: 20px;
+      }
+      
+      .closeEvent {
+        width: 72px;
+        height: 10px;
+        background-color: var(--white);
+        border-radius: 15px;
+        cursor: pointer;
+      }
+      
+      .eventForm {
+        height: 640px;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-around; */
+        align-items: center;
+      }
+      
+      .eventInfo {
+        width: 312px;
+        height: 76px;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: var(--paleGreen);
+      }
+      
+      .eventInput {
+        background: none;
+        border: none;
+        outline: none;
+        width: 300px;
+        height: 20px;
+      }
+      
+      .divider {
+        width: 270px;
+        color: var(--midGreen);
+      }
+      
+      .eventDescription {
+        width: 312px;
+        height: 38px;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: var(--paleGreen);
+        margin-top: 60px;
+      }
+      
+      .eventDateInfo {
+        width: 312px;
+        height: 142px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-top: 60px;
+        background-color: var(--paleGreen);
+      }
+      
+      .eventLabelInput {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .eventLabelInput>label {
+        font-size: 14px;
+      }
+      
+      .eventTime {
+        width: 60px;
+        height: 28px;
+        background-color: blueviolet;
+        color: aquamarine;
+      }
+      
+      .head {
+        display: flex;
+        justify-content: space-between;
+        margin: 25px 35px;
+      }
+      
+      .newEventHeader {
+        color: var(--white);
+      }
+      
+      .createActive {
+        color: var(--white);
+        text-decoration: none;
+        cursor: pointer;
+      }
+      
+      .createActive:hover {
+        color: var(--darkGreen);
+        text-decoration: none;
+      }
+      
+      .createInactive {
+        color: var(--lightGreen);
+      }
+
+      .eventDateInfo {
+        max-width: 430px;
+      }
+
+}

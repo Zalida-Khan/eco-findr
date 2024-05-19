@@ -1,0 +1,63 @@
+.infowindowContent {
+    padding: 10px;
+    background-color: var(--paleGreen);
+    font-family: "Figtree", sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.infowindowHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.infowindowTitle {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Figtree", sans-serif;
+}
+
+.infowindowButton {
+    width: 66px;
+    height: 22px;
+    margin-right: 10px;
+    font-weight: 500;
+    font-size: 13px;
+    background-color: var(--clearButton);
+    border: 2px solid var(--black);
+    border-radius: 5px;
+}
+
+.infowindowButton:hover {
+    background-color: var(--black);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.infowindowDetails {
+    font-size: 14px;
+    color: #5f5d5d;
+    text-align: left;
+    font-family: "Figtree", sans-serif;
+
+}
+
+/* Media query for smaller screens */
+@media only screen and (min-device-width: 428px) and (max-device-width: 926px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
+    .main {
+        max-height: 932px;
+    }
+
+
+}
+
+/* Media query for larger screens */
+@media only screen and (min-width: 1024px) {
+    .main {
+        max-width: 430px;
+        max-height: 932px;
+    }
+
+}

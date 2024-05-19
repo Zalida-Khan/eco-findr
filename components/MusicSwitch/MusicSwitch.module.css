@@ -1,0 +1,38 @@
+.audioContainer {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.audio {
+    width: 220px;
+    background-color: rgb(245, 246, 245);
+    border-radius: 20px;
+}
+
+.audio::-webkit-media-controls-time-remaining-display {
+    display: none;
+}
+
+.audio::-webkit-media-controls-current-time-display {
+    font-family: "Figtree", sans-serif;
+}
+
+.audio::-webkit-media-controls-play-button {
+    border-radius: 50%;
+    width: 5px;
+    transition: background-color 0.3s ease;
+    background-color: var(--paleGreen);
+}
+
+.audio::-webkit-media-controls-volume-slider {
+    border-radius: 20px;
+}
+
+
+.audio::-webkit-media-controls-play-button:hover {
+    background-color: var(--lightGreen);
+    color: var(--black);
+}

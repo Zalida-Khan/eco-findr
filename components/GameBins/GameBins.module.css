@@ -1,0 +1,44 @@
+.bin {
+    width: 150px;
+    height: 150px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+}
+
+.bin img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.bin.incorrect {
+    background-color: red;
+    border-radius: 8px;
+}
+
+.bin.correct {
+    background-color: lightgreen;
+    border-radius: 8px;
+}
+
+/* Media query for smaller screens */
+@media only screen and (min-device-width: 428px) and (max-device-width: 926px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
+    .bin {
+        width: 140px;
+        height: auto;
+        transition: background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+    }
+}
+
+/* Media query for larger screens */
+@media only screen and (min-width: 1024px) {
+    .bin {
+        width: 130px;
+        margin-right: 5px;
+        height: auto;
+        transition: background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+    }
+}

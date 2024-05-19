@@ -1,0 +1,132 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Figtree", sans-serif;
+}
+
+.menuIcon {
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  cursor: pointer;
+  z-index: 100000;
+}
+
+.container {
+  margin: 0;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.cards {
+  margin-top: 5px;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cards > :last-child {
+  margin-bottom: 50px; /* Adjust as needed */
+}
+
+.h3 {
+  text-align: left;
+  margin-left: 35px;
+  margin-top: 40px;
+}
+
+.chipsWrapper {
+  margin-top: 30px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.chips {
+  display: flex;
+  justify-content: center;
+}
+
+.contentWrapper {
+  width: 430px;
+  background-color: var(--white);
+  max-height: 100%;
+}
+
+/* Media query for smaller screens */
+@media only screen and (min-device-width: 428px) and (max-device-width: 926px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
+  .main {
+    max-height: 932px;
+  }
+
+  .menuIcon {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    z-index: 100000;
+  }
+
+  .contentWrapper {
+    width: 430px;
+    background-color: var(--white);
+    max-height: 2000px;
+  }
+
+  .container {
+    margin: 0;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+
+  .cards {
+    margin-top: 5px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .cards > :last-child {
+    margin-bottom: 50px;
+  }
+}
+
+/* Media query for larger screens */
+@media only screen and (min-width: 1024px) {
+  .main {
+    background: linear-gradient(to bottom, var(--lightYellow), var(--lightGreen));
+    position: relative;
+    max-height: 4955px;
+    overflow: hidden;  
+  }
+
+  .chipsWrapper {
+    max-width: 430px;
+    overflow-x: auto;
+  }
+
+  .menuIcon {
+    position: fixed;
+    top: 30px;
+    right: 385px;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .contentWrapper {
+    max-width: 430px;
+    position: relative;
+    background-color: var(--white);
+    max-height: 4955px;
+    overflow-x: auto;
+  }
+
+  .cards > :last-child {
+    margin-bottom: 30px;
+  }
+}

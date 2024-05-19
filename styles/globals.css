@@ -1,0 +1,15 @@
+:root {
+  --lightYellow: #F7EFDA;
+  --black: #000000;
+  --darkGreen: #1A3D28;
+  --paleGreen: #DDE5D6;
+  --midGreen: #466F55;
+  --lightGreen: #9CC089;
+  --white: #ffff;
+  --babyPink: #F4DCDC;
+  --beige: #CBBCB1;
+  --clearButton: rgba(221, 229, 214, 0.3);
+
+  --button-fontsize: 1rem;
+  --h1-fontsize: 5rem;
+}

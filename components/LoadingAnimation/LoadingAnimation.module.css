@@ -1,0 +1,40 @@
+.loadCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 11;
+}
+
+.loadingText {
+    font-family: "Figtree", sans-serif;
+    color: var(--white);
+    z-index: 11;
+    font-size: 20px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+/* Media query for smaller screens */
+@media only screen and (min-device-width: 428px) and (max-device-width: 926px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
+    
+}
+
+/* Media query for larger screens */
+@media only screen and (min-width: 1024px) {
+    .overlay {
+        position: fixed;
+        top: 0;
+        width: 430px;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 10;
+    }
+}

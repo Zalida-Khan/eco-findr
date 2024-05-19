@@ -1,0 +1,32 @@
+.main {
+    display: flex;
+    font-family: "Figtree", sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem;
+    min-height: 80vh;
+    background-image: url("/images/happy_earth.gif");
+    background-size: cover;
+    background-position: center top;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 428px) {
+    .main {
+      background-image: url("/images/landing-page.jpeg");
+      background-size: cover;
+      background-position: center top;
+    }
+  }
+  
+  /* Media query for larger screens */
+  @media (min-width: 1024px) {
+    .main {
+      background-image: url("/images/landing-page.jpeg"),
+        linear-gradient(to bottom, var(--lightYellow), var(--lightGreen));
+      background-repeat: no-repeat;
+      background-position: center top, center;
+      background-size: contain;
+    }
+  }

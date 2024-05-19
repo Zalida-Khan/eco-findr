@@ -1,0 +1,83 @@
+.setup {
+  width: 300px;
+  height: 240px;
+  background-color: var(--midGreen);
+  border-radius: 23px;
+  margin: 5px;
+  z-index: 2;
+  text-align: center;
+}
+
+.action {
+  display: flex;
+  width: 328px;
+  height: 133px;
+  border: 1px solid black;
+  border-radius: 23px;
+  background-color: var(--paleGreen);
+  position: absolute;
+  margin-top: 356px;
+  margin-left: 1px;
+  z-index: 1;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.setupButton {
+  width: 83px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 14.21px;
+  text-align: center;
+}
+
+.question {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 75px;
+}
+
+.question p {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28.5px;
+  font: "Figtree";
+  text-align: center;
+  flex: 1;
+  padding: 0px 15px;
+}
+
+.choicesCont {
+  display: flex;
+  flex-direction: row;
+  width: 270px;
+  height: 75px;
+  background-color: var(--paleGreen);
+  border-radius: 23px;
+  border: 0.5px solid black;
+  text-align: center;
+  margin-top: 5%;
+  font: "Figtree";
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.choicesCont button {
+  flex: 1;
+  background-color: var(--paleGreen);
+  border-radius: 23px;
+  border: 0.5px solid black;
+  text-align: center;
+  font: "Figtree";
+  font-weight: 500;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.choicesCont button:hover {
+  background-color: var(--lightGreen);
+  border: 1px solid black;
+}

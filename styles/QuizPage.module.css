@@ -1,0 +1,145 @@
+.main {
+  display: flex;
+  font-family: "Figtree", sans-serif;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('/images/landing-page.jpeg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.quizCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 220px;
+}
+
+.indicatorsQuiz {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  top: 150px;
+}
+
+.quizIndicator {
+  width: 60px;
+  height: auto;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.active {
+  opacity: 1;
+}
+
+.inactive {
+  opacity: 0.5;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.setup {
+  width: 300px;
+  height: auto;
+  background-color: var(--midGreen);
+  border-radius: 23px;
+  margin: 5px;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+  color: var(--white);
+}
+
+.buttonCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.button,
+.buttonTwo {
+  padding: 15px 40px;
+  cursor: pointer;
+  border-radius: 25px;
+  border: 2px solid var(--black);
+  background-color: var(--clear-button);
+  color: var(--black);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  min-width: 150px;
+}
+
+.buttonTwo {
+  padding: 15px 40px;
+  cursor: pointer;
+  border-radius: 25px;
+  border: 2px solid var(--darkGreen);
+  background-color: var(--darkGreen);
+  color: var(--white);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  min-width: 170px;
+}
+
+.button:hover {
+  background-color: var(--darkGreen);
+  color: var(--white);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.buttonTwo:hover {
+  background-color: var(--clear-button);
+  color: var(--black);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.textContainer {
+  max-width: 350px;
+  text-align: center;
+  margin-bottom: 10rem;
+}
+
+/* .quizCompleted {
+  margin-top: 0rem;
+  margin-bottom: 3rem;
+} */
+
+/* Media query for smaller screens */
+@media only screen and (min-device-width: 428px) and (max-device-width: 926px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
+  .main {
+    background-image: url('/images/landing-page.jpeg');
+    background-size: cover;
+    background-position: center top;
+  }
+}
+
+/* Media query for larger screens */
+@media only screen and (min-width: 1024px) {
+  .main {
+    background-image: url('/images/landing-page.jpeg'), linear-gradient(to bottom, var(--lightYellow), var(--lightGreen));
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top, center;
+  }
+
+  .loadingOverlay {
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+}
