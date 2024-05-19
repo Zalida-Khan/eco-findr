@@ -17,7 +17,7 @@
 }
 
 .audio::-webkit-media-controls-current-time-display {
-    font-family: "Figtree", sans-serif;
+    display: none;
 }
 
 .audio::-webkit-media-controls-play-button {

@@ -10,6 +10,7 @@ const useAudio = url => {
     useEffect(() => {
         if (typeof window !== 'undefined') {
             setAudio(new Audio(url))
+            
         }
     }, []);
 
@@ -38,7 +39,7 @@ const MusicPlayer = ({ url }) => {
     return (
         <div className={styles.audioContainer}>
             <audio className={styles.audio} controls autoPlay={playing} controlsList="nodownload noplaybackrate">
-                <source src="/backgroundmusic.mp3" />
+                <source src="/background-music.mp3" />
             </audio>
         </div>
     );
