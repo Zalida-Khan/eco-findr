@@ -76,7 +76,7 @@ function Map() {
           time: "10:00 a.m.",
         },
         {
-          position: { lat: 49.2945, lng: -123.139999},
+          position: { lat: 49.2945, lng: -123.139999 },
           iconUrl: "/images/garbage-pin.png",
           title: "Beach Cleanup",
           location: "Second Beach, Stanley Park, Vancouver, BC V6G 3E2",
