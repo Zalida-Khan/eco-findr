@@ -103,7 +103,7 @@ const Profile = () => {
                 <LargeButton
                   className={styles.lgBtn}
                   text={t.savedEvents}
-                  href="TargetedPage"
+                  href="/SavedEvents"
                 />
                 <LargeButton
                   className={styles.lgBtn}

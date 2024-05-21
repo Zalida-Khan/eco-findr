@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import HamburgerMenu from "@/components/HamburgerMenu";
 import { NavigationBar } from "@/components/Navigation";
 
-export default function EventHistory() {
+export default function SavedEvents() {
   const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
 
   const toggleHamburgerMenu = () => {
@@ -52,16 +52,7 @@ export default function EventHistory() {
             />
       
             <Cards title="Hike" imgSrc="/images/hiking.jpeg" alt="hike" />
-
-            <Cards title="Biking" 
-            imgSrc="/images/biking.jpeg" 
-            alt="biking"
-             />
-            <Cards
-              title="Swap Sale"
-              imgSrc="/images/garage-sale.jpeg"
-              alt="swap-sale"
-            />
+       
             <Cards title="Outdoor Yoga" imgSrc="/images/yoga.jpeg" alt="yoga" />
            
             <Cards
@@ -69,7 +60,6 @@ export default function EventHistory() {
               imgSrc="/images/Clean-Up.jpeg"
               alt="Clean-up"
             />
-            <Cards title="Picnic" imgSrc="/images/picnic.jpeg" alt="picnic" />
           </div>
           </div>
           <NavigationBar />
