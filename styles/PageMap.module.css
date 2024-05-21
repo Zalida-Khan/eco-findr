@@ -5,7 +5,7 @@
     align-items: center;
     max-height: 100vh;
     font-family: "Figtree", sans-serif;
-    position: relative; /* Ensure relative positioning for child elements */
+    position: relative;
   }
   
   .menuIcon {
@@ -25,11 +25,11 @@
   }
 
   .contentWrapper {
-    flex-grow: 1; /* Fill remaining space */
+    flex-grow: 1;
     width: 430px;
-    max-height: 932px; /* Limit the max height for background color */
+    max-height: 932px;
     background-color: var(--white);
-    overflow-y: auto; /* Add scrollbar if content exceeds max height */
+    overflow-y: auto;
   }
   
   /* Media queries */
@@ -52,7 +52,7 @@
     .main {
       background: linear-gradient(to bottom, var(--lightYellow), var(--lightGreen));
       position: relative;
-      max-height: 932px; /* Limit the max height for background color */
+      max-height: 932px; 
       overflow: hidden;
     }
   
@@ -60,7 +60,7 @@
       max-width: 430px;
       position: relative;
       background-color: var(--white);
-      overflow-y: auto; /* Allow content scrolling */
+      overflow-y: auto; 
     }
   
 

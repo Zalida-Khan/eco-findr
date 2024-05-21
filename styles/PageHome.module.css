@@ -5,7 +5,7 @@
   align-items: center;
   max-height: 100vh;
   font-family: "Figtree", sans-serif;
-  position: relative; /* Ensure relative positioning for child elements */
+  position: relative; 
 }
 
 .menuIcon {
@@ -14,7 +14,6 @@
   margin-left: 150px;
   z-index: 100000;
   cursor: pointer;
-
 }
 
 .container {
@@ -34,18 +33,20 @@
 }
 
 .cards > :last-child {
-  margin-bottom: 50px; /* Adjust as needed */
+  margin-bottom: 50px;
 }
 
 .h3 {
+  font-size: 18px;
   text-align: left;
   margin-left: 35px;
   margin-top: 40px;
 }
 
 .chipsWrapper {
-  margin-top: 30px;
-  width: 100%;
+  margin-top: 20px;
+  width: calc(100% - 70px); /* Full width minus left and right margins */
+  padding: 0 35px; /* Add padding for both left and right */
   overflow-x: auto;
 }
 
@@ -55,11 +56,11 @@
 }
 
 .contentWrapper {
-  flex-grow: 1; /* Fill remaining space */
+  flex-grow: 1; 
   width: 430px;
-  max-height: 932px; /* Limit the max height for background color */
+  max-height: 932px;
   background-color: var(--white);
-  overflow-y: auto; /* Add scrollbar if content exceeds max height */
+  overflow-y: auto; 
 }
 
 /* Media queries */
@@ -69,17 +70,34 @@
     overflow: hidden;
   }
 
+  .chipsWrapper {
+    display: flex;
+    margin-left: 30px;
+    margin-top: 20px;
+    width: calc(100% - 70px); /* Full width minus left and right margins */
+    padding-left: 45px; /* Add padding for both left and right */
+    overflow-x: auto;
+    justify-content: center;
+  }
+  
+  .chips {
+    display: flex;
+    padding-left: 225px; /* Add padding for both left and right */
+    padding-right: 30px; /* Add padding for both left and right */
+    justify-content: center;
+  }
 
   .contentWrapper {
     width: 430px;
     background-color: var(--white);
     max-height: 2000px;
+    overflow-x: hidden;
   }
 
   .container {
     margin: 0;
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
 
   .cards {
@@ -100,13 +118,25 @@
   .main {
     background: linear-gradient(to bottom, var(--lightYellow), var(--lightGreen));
     position: relative;
-    max-height: 932px; /* Limit the max height for background color */
+    max-height: 932px; 
     overflow: hidden;
   }
 
   .chipsWrapper {
-    max-width: 430px;
+    display: flex;
+    margin-left: 30px;
+    margin-top: 20px;
+    width: calc(100% - 70px); /* Full width minus left and right margins */
+    padding-left: 45px; /* Add padding for both left and right */
     overflow-x: auto;
+    justify-content: center;
+  }
+  
+  .chips {
+    display: flex;
+    padding-left: 225px; /* Add padding for both left and right */
+    padding-right: 30px; /* Add padding for both left and right */
+    justify-content: center;
   }
 
 
@@ -115,7 +145,8 @@
     position: relative;
     max-height: 932px;
     background-color: var(--white);
-    overflow-y: auto; /* Allow content scrolling */
+    overflow-y: auto; 
+    overflow-x: hidden;
   }
 
   .cards > :last-child {

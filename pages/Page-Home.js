@@ -10,16 +10,17 @@ import sampleEvents from "@/public/samples/events";
 
 export default function Home() {
   const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
+  const [filteredEvents, setFilteredEvents] = useState(sampleEvents);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [activeChip, setActiveChip] = useState("");
 
   const toggleHamburgerMenu = () => {
     setShowHamburgerMenu(!showHamburgerMenu);
   };
 
-  const [filteredEvents, setFilteredEvents] = useState(sampleEvents);
-  const [searchTerm, setSearchTerm] = useState("");
-
   const handleSearch = (searchTerm) => {
     setSearchTerm(searchTerm);
+    setActiveChip(searchTerm);
 
     const filteredItems = sampleEvents.filter((event) =>
       event.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -36,7 +37,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-        <main className={`${styles.main}`}>
+      <main className={styles.main}>
         <div className={styles.container}>
           <div className={styles.contentWrapper}>
             <img
@@ -48,23 +49,24 @@ export default function Home() {
               onClick={toggleHamburgerMenu}
             />
             {showHamburgerMenu && <HamburgerMenu closeMenu={toggleHamburgerMenu} />}
-
             <SearchBar onSearch={handleSearch} />
+            <h3 className={styles.h3}>Categories</h3>
             <div className={styles.chipsWrapper}>
               <div className={styles.chips}>
-                <Chips buttonText={"Biking"} />
-                <Chips buttonText={"Outdoor"} />
-                <Chips buttonText={"Beach"} />
-                <Chips buttonText={"Hike"} />
-                <Chips buttonText={"Indoor"} />
-                <Chips buttonText={"Food"} />
-                <Chips buttonText={"Group"} />
+                <Chips buttonText={"Biking"} onClick={handleSearch} isActive={activeChip === "Biking"} />
+                <Chips buttonText={"Outdoor"} onClick={handleSearch} isActive={activeChip === "Outdoor"} />
+                <Chips buttonText={"Beach"} onClick={handleSearch} isActive={activeChip === "Beach"} />
+                <Chips buttonText={"Hike"} onClick={handleSearch} isActive={activeChip === "Hike"} />
+                <Chips buttonText={"Indoor"} onClick={handleSearch} isActive={activeChip === "Indoor"} />
+                <Chips buttonText={"Clean Up"} onClick={handleSearch} isActive={activeChip === "Clean Up"} />
+                <Chips buttonText={"Gardening"} onClick={handleSearch} isActive={activeChip === "Gardening"} />
               </div>
             </div>
             <h3 className={styles.h3}>Upcoming Events</h3>
             <div className={styles.cards}>
               {filteredEvents.map((event) => (
                 <Cards
+                  key={event.title}
                   title={event.title}
                   description={event.description}
                   location={event.location}
@@ -77,10 +79,8 @@ export default function Home() {
             </div>
           </div>
           <NavigationBar />
-
-      </div>
+        </div>
       </main>
     </>
   );
-
-};
+}

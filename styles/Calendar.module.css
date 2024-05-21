@@ -35,11 +35,11 @@
 }
 
 .contentWrapper {
-  flex-grow: 1; /* Fill remaining space */
+  flex-grow: 1;
   width: 430px;
-  max-height: 932px; /* Limit the max height for background color */
+  max-height: 932px; 
   background-color: var(--white);
-  overflow-y: auto; /* Add scrollbar if content exceeds max height */
+  overflow-y: auto; 
 }
 /* Media query for smaller screens */
 @media only screen and (min-device-width: 428px) and (max-device-width: 926px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {

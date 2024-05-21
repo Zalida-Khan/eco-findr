@@ -89,6 +89,12 @@
     color: var(--black);
     cursor: pointer;
   }
+
+  .backBTN:hover {
+    background-color: var(--paleGreen);
+    color: var(--black);
+    cursor: pointer;
+  }
   
   .skipBTN {
     color: black;

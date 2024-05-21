@@ -7,40 +7,39 @@
   border-radius: 5px;
   margin: 7px;
   flex: 0 0 auto;
+  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
 }
 
-.chipCard:hover {
+.chipCard:hover,
+.chipCard:active,
+.chipCard.active {
   background-color: var(--darkGreen);
   border-color: var(--darkGreen);
   color: var(--white);
-}
-
-.chipCard:active {
-  background-color: var(--darkGreen);
-  color: var(--white);
+  cursor: pointer;  
 }
 
 .chipsWrapper {
-  margin-top: 30px;
+  margin-top: 20px;
   width: 100%;
-  overflow-x: auto;
+  overflow: hidden;
 }
 
 .chips {
   display: flex;
-  justify-content: center;    
+  justify-content: center;
 }
 
 /* Media query for smaller screens */
 @media only screen and (min-device-width: 428px) and (max-device-width: 926px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
   .chipsWrapper {
-    padding: 0 15px; 
+    padding: 0 20px; 
   }
 }
 
 /* Media query for larger screens */
 @media only screen and (min-width: 1024px) {
   .chipsWrapper {
-    padding-left: 40px; 
+    padding-left: 0 50px; 
   }
 }

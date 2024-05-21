@@ -1,8 +1,9 @@
 import Head from "next/head";
 import styles from "@/styles/EventHistory.module.css";
-import Cards from "@/components/Cards";
+import Cards from "@/components/Cards/cards-events";
 import React, { useState } from "react";
 import HamburgerMenu from "@/components/HamburgerMenu";
+import Link from "next/link";
 import { NavigationBar } from "@/components/Navigation";
 
 export default function EventHistory() {
@@ -23,7 +24,13 @@ export default function EventHistory() {
       <main className={`${styles.main} `}>
         <div className={styles.container}>
         <div className={styles.contentWrapper}>
-
+        <Link href="/Profile"><img
+            src={"/images/back-button.png"}
+            className={styles.backIcon}
+            width="20px"
+            height="auto"
+            alt="back button"
+          /></Link>
           <img
             src={"/images/hamburgerMenu.png"}
             className={styles.menuIcon}
@@ -41,35 +48,28 @@ export default function EventHistory() {
 
           <Cards
               title="Tree Planting"
+              location="987 Cedar Road, Vancouver, BC"
+              date="December 5th"
+              time="9:00 AM"
               imgSrc="/images/tree-planting.jpeg"
               alt="tree-planting"
             />
-             <Cards title="Fishing" imgSrc="/images/fishing.jpeg" alt="fishing" />
             <Cards
-              title="Gardening"
-              imgSrc="/images/gardening.jpeg"
+              title="Biking Tour"
+              location="123 Bike Lane, Vancouver, BC"
+              date="September 25th"
+              time="9:00 AM"
+              imgSrc="/images/biking-tour.jpeg"
               alt="gardening"
             />
-      
-            <Cards title="Hike" imgSrc="/images/hiking.jpeg" alt="hike" />
-
             <Cards title="Biking" 
+                  location="456 Elm Street, Downtown Vancouver, BC"
+                  date="August 15th"
+                  time="2:30 PM"
             imgSrc="/images/biking.jpeg" 
             alt="biking"
+            
              />
-            <Cards
-              title="Swap Sale"
-              imgSrc="/images/garage-sale.jpeg"
-              alt="swap-sale"
-            />
-            <Cards title="Outdoor Yoga" imgSrc="/images/yoga.jpeg" alt="yoga" />
-           
-            <Cards
-              title="Community Clean Up"
-              imgSrc="/images/Clean-Up.jpeg"
-              alt="Clean-up"
-            />
-            <Cards title="Picnic" imgSrc="/images/picnic.jpeg" alt="picnic" />
           </div>
           </div>
           <NavigationBar />
