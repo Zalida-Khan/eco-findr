@@ -39,7 +39,7 @@ const MusicPlayer = ({ url }) => {
     return (
         <div className={styles.audioContainer}>
             <audio className={styles.audio} controls autoPlay={playing} controlsList="nodownload noplaybackrate">
-                <source src="/background-music.mp3" />
+                <source src="/audio/background-music.mp3" />
             </audio>
         </div>
     );

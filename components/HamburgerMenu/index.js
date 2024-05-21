@@ -5,7 +5,6 @@ import MusicPlayer from "@/components/MusicSwitch";
 
 const HamburgerMenu = ({ closeMenu }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMusicPlaying, setIsMusicPlaying] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);

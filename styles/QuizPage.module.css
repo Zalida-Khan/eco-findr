@@ -18,6 +18,7 @@
   align-items: center;
   position: fixed;
   top: 220px;
+
 }
 
 .indicatorsQuiz {
@@ -120,7 +121,10 @@
     background-image: url('/images/landing-page.jpeg');
     background-size: cover;
     background-position: center top;
+    max-height: 932px;
   }
+
+
 }
 
 /* Media query for larger screens */

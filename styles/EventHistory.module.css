@@ -13,17 +13,27 @@
     top: 30px;
     margin-left: 150px;
     z-index: 100000;
-    cursor: pointer;
-
   }
   
   .container {
     margin: 0;
     text-align: center;
-    max-height: 932px;
-    overflow: hidden;
   }
+  
+  .cards {
+    margin-top: 5px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  
 
+  .chartsWrapper {
+    margin-top: 60px;
+}
   .contentWrapper {
     flex-grow: 1; /* Fill remaining space */
     width: 430px;
@@ -34,18 +44,36 @@
   
   /* Media queries */
   @media only screen and (min-device-width: 428px) and (max-device-width: 926px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
+    .main {
+    max-height: 1000px;
+        overflow: hidden;
+    }
+  
   
     .contentWrapper {
       width: 430px;
       background-color: var(--white);
-      max-height: 2000px;
+      max-height: 1000px;
     }
   
     .container {
       margin: 0;
       text-align: center;
+      margin-bottom: 100px;
     }
   
+    .cards {
+      margin-top: 5px;
+      margin-bottom: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    
+    .cards > :last-child {
+      margin-bottom: 50px;
+    }
   }
   
   @media only screen and (min-width: 1024px) {
@@ -56,6 +84,12 @@
       overflow: hidden;
     }
   
+    .chipsWrapper {
+      max-width: 430px;
+      overflow-x: auto;
+    }
+  
+  
     .contentWrapper {
       max-width: 430px;
       position: relative;
@@ -63,6 +97,8 @@
       overflow-y: auto; /* Allow content scrolling */
     }
   
-
+    .cards > :last-child {
+      margin-bottom: 30px;
+    }
   }
   

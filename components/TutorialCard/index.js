@@ -37,7 +37,7 @@ export function TutorialCard({
         </div>
         {!isFirst && <p>{description}</p>}
         <div className={styles.functionContent}>
-          <Link href="index.js">
+          <Link href="/index.js">
             <button
               className={`${styles.functionBTN} ${styles.backBTN}`}
               onClick={onBack}

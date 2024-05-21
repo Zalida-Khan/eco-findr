@@ -24,12 +24,14 @@ const MapPage = () => {
       <main className={`${styles.main}`}>
         <div className={styles.container}>
         <div className={styles.contentWrapper}>
-          <img src={"/images/hamburgerMenu.png"}
-            className={styles.menuIcon}
-            width="40px"
-            height="auto"
-            alt="hamburger menu"
-            onClick={toggleHamburgerMenu} />
+        <img
+              src={"/images/hamburgerMenu.png"}
+              className={styles.menuIcon}
+              width="40px"
+              height="auto"
+              alt="hamburger menu"
+              onClick={toggleHamburgerMenu}
+            />
             {showHamburgerMenu && <HamburgerMenu closeMenu={toggleHamburgerMenu} />}
             <Map address="3700 Willingdon Ave, Burnaby, BC V5G 3H2" />
           </div>

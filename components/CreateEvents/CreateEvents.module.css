@@ -8,7 +8,7 @@
     background-color: var(--paleGreen);
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
   }
   
   .event {
@@ -56,6 +56,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    position: relative;
     margin-right: 20px;
 
   }
@@ -199,8 +200,7 @@
         justify-content: center;
         cursor: pointer;
         position: fixed;
-        left: 350px;
-        margin-bottom: -15px;
+        right: 15px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
       }
     
@@ -238,7 +238,7 @@
         background-color: var(--paleGreen);
         justify-content: space-around;
         align-items: center;
-        margin-bottom: 5px;
+        margin-bottom: 15px;
         margin-left: 5px;
       }
       
@@ -271,11 +271,10 @@
         justify-content: center;
         cursor: pointer;
         position: fixed;
-        right: 359px;
-        margin-bottom: 70px;
+        margin-left: 330px;
+        bottom: 100px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
       }
-    
       .createButton:hover {
         background-color: var(--lightGreen);
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);

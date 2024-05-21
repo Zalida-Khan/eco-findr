@@ -83,6 +83,12 @@
     color: var(--clearButton);
     border: 1px solid var(--clearButton);
   }
+
+  .backBTN:hover :nth-child(0) {
+    background-color: var(--paleGreen);
+    color: var(--black);
+    cursor: pointer;
+  }
   
   .skipBTN {
     color: black;
@@ -108,3 +114,4 @@
     color: var(--black);
     cursor: pointer;
   }
+

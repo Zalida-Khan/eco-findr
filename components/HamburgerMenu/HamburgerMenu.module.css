@@ -63,14 +63,13 @@
     width: 316px;
     height: 100%;
     display: flex;
-    position: fixed;
+    position: absolute;
     align-items: center;
     background-color: var(--darkGreen);
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
     top: 0px;
-    right: 353px;
-    z-index: 100000;
+    z-index: 10000000;
     flex-direction: column;
     justify-content: center;
   }

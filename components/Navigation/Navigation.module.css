@@ -1,58 +1,53 @@
 .main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 80vh;
-    font-family: "Figtree", sans-serif;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Figtree", sans-serif;
+}
 
 .containerNav {
-    display: flex;
-    position: fixed;
-    width: 100%;
-    height: 80px;
-    bottom: 0;
-    background-color: #466f55;
-    z-index: 99999;
-    justify-content: space-evenly;
-    align-items: center;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  bottom: 0;
+  background-color: #466f55;
+  z-index: 99999;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+
+.button {
+  border: none;
+  background: none;
+}
+
+.selectedButton {
+  background: linear-gradient(to right, var(--lightGreen), var(--lightGreen));
+  border: none;
+  border-radius: 50%;
+}
+
+.icon {
+  color: white;
+  width: 52px;
+  height: 52px;
+  padding: 0px 8px;
+  cursor: pointer;
+}
+
+@media only screen and (min-device-width: 428px) and (max-device-width: 926px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
+  .containerNav {
+    max-width: 430px;
   }
-  
-  .button {
-    border: none;
-    background: none;
+}
+/* Media query for larger screens */
+@media only screen and (min-width: 1024px) {
+.containerNav {
+    max-width: 430px;
   }
-  
-  .selectedButton {
-    background: linear-gradient(to right, var(--lightGreen), var(--lightGreen));
-    border: none;
-    border-radius: 50%;
-  }
-  
-  .icon {
-    color: white;
-    width: 52px;
-    height: 52px;
-    padding: 0px 8px;
-    cursor: pointer;
-  }
-  
-  /* Media query for larger screens */
-  @media only screen and (min-width: 1024px) {
-    .main {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        min-height: 80vh;
-        font-family: "Figtree", sans-serif;
-      }
-    
-    .containerNav {
-      max-width: 430px;
-    }
-  }
-  
+}

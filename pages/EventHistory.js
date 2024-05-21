@@ -1,7 +1,6 @@
 import Head from "next/head";
-import styles from "@/styles/PageHome.module.css";
+import styles from "@/styles/EventHistory.module.css";
 import Cards from "@/components/Cards";
-import Chips from "@/components/Chips";
 import React, { useState } from "react";
 import HamburgerMenu from "@/components/HamburgerMenu";
 import { NavigationBar } from "@/components/Navigation";
@@ -34,12 +33,10 @@ export default function Home() {
             onClick={toggleHamburgerMenu}
           />
           {showHamburgerMenu && <HamburgerMenu closeMenu={toggleHamburgerMenu} />}
-          <div>
-            <h2>Event History</h2>
-          </div>
-          <div className={styles.chipsWrapper}>
-            <div className={styles.chips}></div>
-          </div>
+          <div className={styles.chartsWrapper}>
+                            <h2>Events History</h2>
+                            </div>
+
           <div className={styles.cards}>
 
           <Cards
@@ -79,8 +76,8 @@ export default function Home() {
             />
             <Cards title="Picnic" imgSrc="/images/picnic.jpeg" alt="picnic" />
           </div>
-          <NavigationBar />
           </div>
+          <NavigationBar />
         </div>
       </main>
     </>

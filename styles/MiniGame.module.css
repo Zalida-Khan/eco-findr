@@ -3,21 +3,24 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    min-height: 80vh;
+    min-height: 100vh;
     font-family: "Figtree", sans-serif;
 }
 
 .menuIcon {
-    position: absolute;
-    top: 40px;
-    right: 30px;
-    cursor: pointer;
+    position: fixed;
+    top: 30px;
+    margin-left: 360px;
     z-index: 100000;
-}
+    cursor: pointer;
+  }
+  
 
 .container {
-    margin: 0 auto;
+    margin: 0;
     text-align: center;
+    max-height: 932px;
+    overflow: hidden;
 }
 
 .contentWrapper {
@@ -117,14 +120,16 @@
 
 /* Media query for smaller screens */
 @media only screen and (min-device-width: 428px) and (max-device-width: 926px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
+    
     .contentWrapper {
         max-width: 430px;
-        height: 932px;
-        overflow-y: auto;
+        max-height: 932px;
+        overflow-y: hidden;
         background-image: linear-gradient(to bottom, rgba(113, 171, 209, 0.5), rgba(255, 255, 255, 0)), url('/images/mini-background.jpeg');
         background-repeat: no-repeat;
-        background-position: center top, center;
+        background-position: top, center;
         background-size: contain;
+        overflow: hidden;
     }
 
     .menuIcon {
@@ -181,13 +186,6 @@
         background: linear-gradient(to bottom, var(--lightYellow), var(--lightGreen));
     }
 
-    .menuIcon {
-        position: fixed;
-        top: 30px;
-        right: 385px;
-        cursor: pointer;
-        z-index: 1;
-    }
 
     .container {
         margin: 0 auto;
@@ -197,11 +195,13 @@
     .contentWrapper {
         max-width: 430px;
         height: 932px;
-        overflow-x: auto;
+        overflow-y: auto;
         background-image: linear-gradient(to bottom, rgba(113, 171, 209, 0.5), rgba(255, 255, 255, 0)), url('/images/mini-background.jpeg');
         background-repeat: no-repeat;
         background-position: center top, center;
         background-size: contain;
+        overflow-y: auto; /* Allow content scrolling */
+        position: relative;
     }
 
     .contentWrapperTwo {
