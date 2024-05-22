@@ -52,7 +52,7 @@
 /* Media queries */
 @media only screen and (min-device-width: 428px) and (max-device-width: 926px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
   .main {
-    max-height: 1000px;
+    max-height: 1900px;
     overflow: hidden;
   }
 
@@ -60,9 +60,16 @@
   .contentWrapper {
     width: 430px;
     background-color: var(--white);
-    max-height: 1000px;
+    margin-bottom: 60px;
   }
 
+  .backIcon {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    z-index: 100000;
+  }
+  
   .container {
     margin: 0;
     text-align: center;

@@ -8,22 +8,23 @@
   margin: 7px;
   flex: 0 0 auto;
   transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+  cursor: pointer;
 }
 
 .chipCard:hover,
-.chipCard:active,
-.chipCard.active {
+.chipCard:active {
   background-color: var(--darkGreen);
   border-color: var(--darkGreen);
   color: var(--white);
-  cursor: pointer;  
 }
 
-.chipsWrapper {
-  margin-top: 20px;
-  width: 100%;
-  overflow: hidden;
+.active {
+  background-color: var(--darkGreen);
+  border-color: var(--darkGreen);
+  color: var(--white);
 }
+
+
 
 .chips {
   display: flex;

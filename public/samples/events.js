@@ -10,7 +10,7 @@ const sampleEvents = [
   },
   {
     title: "Biking",
-    description: "Embark on a scenic group bike ride with us! Explore nature, connect with like-minded individuals, and pedal towards a sustainable future. Join the adventure!",
+    description: "Explore nature, connect with like-minded individuals, and pedal towards a sustainable future. Join the adventure!",
     location: "456 Elm Street, Downtown Vancouver, BC",
     date: "August 15th",
     time: "2:30 PM",
@@ -92,7 +92,7 @@ const sampleEvents = [
   {
     title: "Beach Cleanup",
     description: "Join us for a beach cleanup event to help preserve our beautiful coastal environment. Let's keep our beaches clean and pristine!",
-    location: "789 Beach Road, Vancouver, BC",
+    location: "Jericho, 789 Beach Road, Vancouver, BC",
     date: "June 10",
     time: "1:00 PM",
     imgSrc: "/images/beach-cleanup.jpeg",

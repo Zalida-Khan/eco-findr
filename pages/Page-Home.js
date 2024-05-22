@@ -12,21 +12,29 @@ export default function Home() {
   const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
   const [filteredEvents, setFilteredEvents] = useState(sampleEvents);
   const [searchTerm, setSearchTerm] = useState("");
-  const [activeChip, setActiveChip] = useState("");
+  const [activeChips, setActiveChips] = useState([]);
+  
 
   const toggleHamburgerMenu = () => {
     setShowHamburgerMenu(!showHamburgerMenu);
   };
 
-  const handleSearch = (searchTerm) => {
-    setSearchTerm(searchTerm);
-    setActiveChip(searchTerm);
+  const handleSearch = (chipText) => {
+    let updatedActiveChips;
+    if (activeChips.includes(chipText)) {
+      updatedActiveChips = activeChips.filter((chip) => chip !== chipText);
+    } else {
+      updatedActiveChips = [...activeChips, chipText];
+    }
+
+    setActiveChips(updatedActiveChips);
+    setSearchTerm(chipText);
 
     const filteredItems = sampleEvents.filter((event) =>
-      event.title.toLowerCase().includes(searchTerm.toLowerCase())
+      updatedActiveChips.some((chip) => event.title.toLowerCase().includes(chip.toLowerCase()))
     );
 
-    setFilteredEvents(filteredItems);
+    setFilteredEvents(filteredItems.length > 0 ? filteredItems : sampleEvents);
   };
 
   return (
@@ -53,13 +61,13 @@ export default function Home() {
             <h3 className={styles.h3}>Categories</h3>
             <div className={styles.chipsWrapper}>
               <div className={styles.chips}>
-                <Chips buttonText={"Biking"} onClick={handleSearch} isActive={activeChip === "Biking"} />
-                <Chips buttonText={"Outdoor"} onClick={handleSearch} isActive={activeChip === "Outdoor"} />
-                <Chips buttonText={"Beach"} onClick={handleSearch} isActive={activeChip === "Beach"} />
-                <Chips buttonText={"Hike"} onClick={handleSearch} isActive={activeChip === "Hike"} />
-                <Chips buttonText={"Indoor"} onClick={handleSearch} isActive={activeChip === "Indoor"} />
-                <Chips buttonText={"Clean Up"} onClick={handleSearch} isActive={activeChip === "Clean Up"} />
-                <Chips buttonText={"Gardening"} onClick={handleSearch} isActive={activeChip === "Gardening"} />
+                <Chips buttonText={"Biking"} onClick={handleSearch} isActive={activeChips.includes("Biking")} />
+                <Chips buttonText={"Outdoor"} onClick={handleSearch} isActive={activeChips.includes("Outdoor")} />
+                <Chips buttonText={"Beach"} onClick={handleSearch} isActive={activeChips.includes("Beach")} />
+                <Chips buttonText={"Hike"} onClick={handleSearch} isActive={activeChips.includes("Hike")} />
+                <Chips buttonText={"Indoor"} onClick={handleSearch} isActive={activeChips.includes("Indoor")} />
+                <Chips buttonText={"Clean Up"} onClick={handleSearch} isActive={activeChips.includes("Clean Up")} />
+                <Chips buttonText={"Gardening"} onClick={handleSearch} isActive={activeChips.includes("Gardening")} />
               </div>
             </div>
             <h3 className={styles.h3}>Upcoming Events</h3>

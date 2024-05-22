@@ -12,7 +12,6 @@
   border-radius: 5px;
 }
 
-
 .searchIcon {
   width: 24px;
   height: 24px;
@@ -24,9 +23,7 @@
 }
 
 /* Media query for smaller screens */
-@media only screen and (min-device-width: 428px) and (max-device-width: 926px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
-
-}
+@media only screen and (min-device-width: 428px) and (max-device-width: 926px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {}
 
 /* Media query for larger screens */
 @media only screen and (min-width: 1024px) {

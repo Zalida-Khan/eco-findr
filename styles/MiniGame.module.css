@@ -200,7 +200,7 @@
         background-repeat: no-repeat;
         background-position: center top, center;
         background-size: contain;
-        overflow-y: auto; /* Allow content scrolling */
+        overflow-y: auto;
         position: relative;
     }
 

@@ -1,5 +1,5 @@
 .largeButton {
-  position: relative; /* Add relative positioning */
+  position: relative; 
   width: 350px;
   height: 50px;
   background-color: var(--paleGreen);
@@ -19,11 +19,11 @@
 }
 
 .arrow {
-  position: absolute; /* Change to absolute positioning */
-  right: 10px; /* Position to the right */
-  top: 50%; /* Vertically center */
-  transform: translateY(-50%); /* Adjust for vertical centering */
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 20px;
   color: var(--darkGreen);
-  z-index: 1; /* Ensure it's above the button */
+  z-index: 1; 
 }

@@ -45,8 +45,8 @@
 
 .chipsWrapper {
   margin-top: 20px;
-  width: calc(100% - 70px); /* Full width minus left and right margins */
-  padding: 0 35px; /* Add padding for both left and right */
+  width: calc(100% - 70px);
+  padding: 0 35px; 
   overflow-x: auto;
 }
 
@@ -74,16 +74,16 @@
     display: flex;
     margin-left: 30px;
     margin-top: 20px;
-    width: calc(100% - 70px); /* Full width minus left and right margins */
-    padding-left: 45px; /* Add padding for both left and right */
+    width: calc(100% - 70px); 
+    padding-left: 45px;
     overflow-x: auto;
     justify-content: center;
   }
   
   .chips {
     display: flex;
-    padding-left: 225px; /* Add padding for both left and right */
-    padding-right: 30px; /* Add padding for both left and right */
+    padding-left: 225px;
+    padding-right: 30px; 
     justify-content: center;
   }
 
@@ -126,16 +126,16 @@
     display: flex;
     margin-left: 30px;
     margin-top: 20px;
-    width: calc(100% - 70px); /* Full width minus left and right margins */
-    padding-left: 45px; /* Add padding for both left and right */
+    width: calc(100% - 70px);
+    padding-left: 45px;
     overflow-x: auto;
     justify-content: center;
   }
   
   .chips {
     display: flex;
-    padding-left: 225px; /* Add padding for both left and right */
-    padding-right: 30px; /* Add padding for both left and right */
+    padding-left: 225px;
+    padding-right: 30px;
     justify-content: center;
   }
 
