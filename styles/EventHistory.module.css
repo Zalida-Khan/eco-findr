@@ -103,4 +103,11 @@
   .cards> :last-child {
     margin-bottom: 70px;
   }
+
+  .backIcon {
+    position: fixed;
+    top: 30px;
+    left: 380px;
+    z-index: 100000;
+  }
 }

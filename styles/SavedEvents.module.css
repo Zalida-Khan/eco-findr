@@ -96,6 +96,12 @@
     overflow-x: auto;
   }
 
+  .backIcon {
+    position: fixed;
+    top: 30px;
+    left: 380px;
+    z-index: 100000;
+  }
 
   .contentWrapper {
     max-width: 430px;

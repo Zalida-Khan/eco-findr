@@ -1,123 +1,122 @@
 .main {
-    width: 346px;
-    height: 435px;
-    border-radius: 23px;
-    background-color: var(--midGreen);
-  }
-  
-  .content {
-    height: inherit;
-    width: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    color: var(--white);
-  }
-  
-  .counter {
-    width: 93px;
-    height: 25px;
-    border-radius: 23px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: var(--paleGreen);
-  }
-  
-  .circle {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: var(--lightGreen);
-  }
-  
-  .activeCircle {
-    background-color: var(--midGreen);
-  }
-  
-  .titleContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-  
-  .icon {
-    width: 130px;
-    height: 120px;
-  }
-  
-  .iconTitle {
-    font-weight: 600;
-    font-size: 24px;
-  }
-  
-  .content > p {
-    width: 295px;
-    text-align: center;
-  }
-  
-  .functionContent {
-    display: flex;
-    width: inherit;
-    justify-content: space-evenly;
-  }
-  
-  .functionBTN {
-    width: 77px;
-    height: 25px;
-    font-weight: 500;
-    font-size: 14px;
-    border-radius: 15px;
-    border: 1px solid var(--black);
-  }
-  
-  .backBTN {
-    color: var(--white);
-    background-color: var(--midGreen);
-    cursor: pointer;
-  }
+  width: 346px;
+  height: 435px;
+  border-radius: 23px;
+  background-color: var(--midGreen);
+}
 
-  .backBTN:disabled {
-    color: var(--clearButton);
-    border: 1px solid var(--clearButton);
-  }
+.content {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--white);
+}
 
-  .backBTN:hover :nth-child(0) {
-    background-color: var(--paleGreen);
-    color: var(--black);
-    cursor: pointer;
-  }
+.counter {
+  width: 93px;
+  height: 25px;
+  border-radius: 23px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--paleGreen);
+}
 
-  .backBTN:hover {
-    background-color: var(--paleGreen);
-    color: var(--black);
-    cursor: pointer;
-  }
-  
-  .skipBTN {
-    color: black;
-    background-color: var(--paleGreen);
-    cursor: pointer;
-  }
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--lightGreen);
+}
 
-  .skipBTN:hover {
-    color: var(--white);
-    background-color: var(--midGreen);
-    cursor: pointer;
-    border-color: none;
-  }
-  
-  .nextBTN {
-    background-color: var(--midGreen);
-    color: var(--white);
-    cursor: pointer;
-  }
+.activeCircle {
+  background-color: var(--midGreen);
+}
 
-  .nextBTN:hover {
-    background-color: var(--paleGreen);
-    color: var(--black);
-    cursor: pointer;
-  }
+.titleContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
 
+.icon {
+  width: 130px;
+  height: 120px;
+}
+
+.iconTitle {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.content>p {
+  width: 295px;
+  text-align: center;
+}
+
+.functionContent {
+  display: flex;
+  width: inherit;
+  justify-content: space-evenly;
+}
+
+.functionBTN {
+  width: 77px;
+  height: 25px;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 15px;
+  border: 1px solid var(--black);
+}
+
+.backBTN {
+  color: var(--white);
+  background-color: var(--midGreen);
+  cursor: pointer;
+}
+
+.backBTN:disabled {
+  color: var(--clearButton);
+  border: 1px solid var(--clearButton);
+}
+
+.backBTN:hover :nth-child(0) {
+  background-color: var(--paleGreen);
+  color: var(--black);
+  cursor: pointer;
+}
+
+.backBTN:hover {
+  background-color: var(--paleGreen);
+  color: var(--black);
+  cursor: pointer;
+}
+
+.skipBTN {
+  color: black;
+  background-color: var(--paleGreen);
+  cursor: pointer;
+}
+
+.skipBTN:hover {
+  color: var(--white);
+  background-color: var(--midGreen);
+  cursor: pointer;
+  border-color: none;
+}
+
+.nextBTN {
+  background-color: var(--midGreen);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.nextBTN:hover {
+  background-color: var(--paleGreen);
+  color: var(--black);
+  cursor: pointer;
+}
