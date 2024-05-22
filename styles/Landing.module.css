@@ -11,7 +11,7 @@
 }
 
 .appName {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   font-family: "Wendy One", sans-serif;
   font-size: 90px;
   font-family: "Wendy One", sans-serif;
@@ -29,7 +29,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 25px;
 }
 
 /* Styles for buttons */
