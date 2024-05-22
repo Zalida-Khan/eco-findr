@@ -107,7 +107,8 @@
   .backIcon {
     position: fixed;
     top: 30px;
-    left: 380px;
+    left: 230px;
+    justify-content: center;
     z-index: 100000;
   }
 }
